@@ -29,7 +29,7 @@ RUN echo . \
   && useradd -u 1111 -U -d /config -s /bin/false abc \
   && usermod -G users abc \
   && mkdir -p \
-    /config
+    /config \
     /defaults
 
 ADD root /
