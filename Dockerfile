@@ -30,6 +30,7 @@ RUN echo . \
   && usermod -G users abc \
   && mkdir -p \
     /config
+    /defaults
 
 ADD root /
 
