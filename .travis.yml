@@ -1,12 +1,10 @@
 language: ruby
-os: linux
+os: 
+  - linux
 arch: amd64
 branches:
-  except:
-  - master
   only:
-  - release
-  - stable
+  - master
 services:
   - docker
 before_install:
@@ -17,4 +15,4 @@ after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
     docker push $DOCKER_REPO;
-    fi
+    fixsxa aa                 
