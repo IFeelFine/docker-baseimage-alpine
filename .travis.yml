@@ -9,7 +9,7 @@ services:
   - docker
 before_install:
   - export VERSION="$TRAVIS_COMMIT.$TRAVIS_BUILD_ID"
-  - export BUILD_DATE="$(date '"+%b %d %Y@%H:%M:%S %Z'")"
+  - export BUILD_DATE="$(date "'"+%b %d %Y@%H:%M:%S %Z"'")"
   - docker build -t $DOCKER_REPO .
 script:
   - docker images $DOCKER_REPO
