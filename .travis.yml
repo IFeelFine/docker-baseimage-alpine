@@ -16,5 +16,6 @@ script:
   - docker images $DOCKER_REPO
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    docker push $DOCKER_REPO;
+      docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+      docker push $DOCKER_REPO;
+    fi
